@@ -11,7 +11,7 @@ import (
 // R 82
 // C 67
 // D 68
-//Проверим что R выполняется 1 раз)
+//TODO: Сделать через горутины
 
 func Foo(input string) bool {
 	map_command := make(map[int]bool)
