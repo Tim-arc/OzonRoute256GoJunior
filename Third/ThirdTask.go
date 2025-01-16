@@ -26,15 +26,20 @@ func main() {
 		input = strings.TrimSpace(input)
 		numElement, _ := strconv.Atoi(input)
 
-		//ints := make([]int, numElement)
+		sortinput := make([]string, len(input))
 		for j := 0; j < numElement; j++ {
 			input, _ = in.ReadString('\n')
 			input = strings.TrimSpace(input)
 			input := strings.Split(input, " ") // input - int
 			fmt.Println(input)
-			sortinput := make([]string, len(input))
 			copy(sortinput, input)
 			sort.Strings(sortinput)
+		}
+		for j := 0; j < numElement; j++ {
+			input, _ = in.ReadString('\n')
+			input = strings.TrimSpace(input)
+			input := strings.Split(input, " ") // input - int
+			fmt.Println(input)
 			if reflect.DeepEqual(input, sortinput) {
 				fmt.Println("Yes")
 			} else {
